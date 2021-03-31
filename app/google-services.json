@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "278861851151",
+    "project_id": "kabaddi-18ed7",
+    "storage_bucket": "kabaddi-18ed7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278861851151:android:8b7f30778de14f5fed917a",
+        "android_client_info": {
+          "package_name": "com.myapp.kabaddi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278861851151-s406jcc6e7qfcjpo7gptt4p7pajapa3g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAiAaNHLR5SiRAsOwYXiP_d0JDJcQF3BQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "278861851151-s406jcc6e7qfcjpo7gptt4p7pajapa3g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
