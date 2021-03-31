@@ -94,6 +94,26 @@ public class scoring extends AppCompatActivity {
             }
         });
 
+        Score2team1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                counter[0] = counter[0] + 2;
+                Map<String,Object> score1= new HashMap<>();
+                score1.put("Team1score",counter[0]);
+                db.collection("matches").document(matchID).update(score1);
+            }
+        });
+
+        Score3team1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                counter[0] = counter[0] + 3;
+                Map<String,Object> score1= new HashMap<>();
+                score1.put("Team1score",counter[0]);
+                db.collection("matches").document(matchID).update(score1);
+            }
+        });
+
         Scoreteam2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -104,6 +124,25 @@ public class scoring extends AppCompatActivity {
             }
         });
 
+        Score2team2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                counter[1] = counter[1] + 2;
+                Map<String,Object>score2 = new HashMap<>();
+                score2.put("Team2score",counter[1]);
+                db.collection("matches").document(matchID).update(score2);
+            }
+        });
+
+        Score3team2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                counter[1] = counter[1] +3;
+                Map<String,Object>score2 = new HashMap<>();
+                score2.put("Team2score",counter[1]);
+                db.collection("matches").document(matchID).update(score2);
+            }
+        });
 
 
         Undoteam1.setOnClickListener(new View.OnClickListener() {
@@ -113,6 +152,36 @@ public class scoring extends AppCompatActivity {
 
                 }else{
                     counter[0]--;
+                    Map<String,Object> score1= new HashMap<>();
+                    score1.put("Team1score",counter[0]);
+                    db.collection("matches").document(matchID).update(score1);
+                }
+
+            }
+        });
+
+        Undo2team1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(counter[0] == 0){
+
+                }else{
+                    counter[0] = counter[0] - 2;
+                    Map<String,Object> score1= new HashMap<>();
+                    score1.put("Team1score",counter[0]);
+                    db.collection("matches").document(matchID).update(score1);
+                }
+
+            }
+        });
+
+        Undo3team1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(counter[0] == 0){
+
+                }else{
+                    counter[0] = counter[0] - 3;
                     Map<String,Object> score1= new HashMap<>();
                     score1.put("Team1score",counter[0]);
                     db.collection("matches").document(matchID).update(score1);
@@ -136,6 +205,40 @@ public class scoring extends AppCompatActivity {
 
             }
         });
+
+        Undo2team2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(counter[1] == 0){
+
+                }
+                else {
+                    counter[1] = counter[1] - 2;
+                    Map<String,Object>score2 = new HashMap<>();
+                    score2.put("Team2score",counter[1]);
+                    db.collection("matches").document(matchID).update(score2);
+                }
+
+            }
+        });
+
+        Undo3team2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(counter[1] == 0){
+
+                }
+                else {
+                    counter[1] = counter[1] -3;
+                    Map<String,Object>score2 = new HashMap<>();
+                    score2.put("Team2score",counter[1]);
+                    db.collection("matches").document(matchID).update(score2);
+                }
+
+            }
+        });
+
+
 
         finishbtn.setOnClickListener(new View.OnClickListener() {
             @Override
